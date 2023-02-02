@@ -1,3 +1,5 @@
+// Jquery Functionality
+
 // $(document).ready(()=>{
 // 	// Dropdown toggling on hover
 // 	function toggleMenu() {
@@ -32,7 +34,10 @@
 // 	})
 // })
 
+// Vanilla Javascript Functionality
+
 document.addEventListener("DOMContentLoaded", (event) => {
+	// function to toggle dropdown on hover
 	function toggleDropdown(){
 		if (document.documentElement.clientWidth > 992) {
 			const dropdown = document.querySelectorAll("li.dropdown");
@@ -61,9 +66,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	window.addEventListener("resize", function(){
        	toggleDropdown()
 	}, true);
-	toggleDropdown()
+	toggleDropdown() // calling onload to set event for hover
 
 	const navbarToggler = document.querySelector(".navbar-toggler");
+
+	// Toggling mobile menu with close button
 	function toggleCollapse(ele){
 	  	const menuHeader = document.querySelector('.megamenu_header');
 	  	const html = document.querySelector('html');
@@ -84,6 +91,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	  	}
 	}
 
+	// event for toggling collapsible menu in moibile
 	navbarToggler.addEventListener('click',(e)=>{
 	  	let ele = e.target
 	  	if(ele.classList.contains('navbar-toggler')){
